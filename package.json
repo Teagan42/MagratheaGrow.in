@@ -1,0 +1,24 @@
+{
+  "name": "magratheagrow.in",
+  "version": "1.0.0",
+  "description": "Dashboards and administration controls for the automation in Magrathea",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teagan42/MagratheaGrow.in.git"
+  },
+  "keywords": [
+    "weed",
+    "automation",
+    "sensors"
+  ],
+  "author": "Teagan Glenn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Teagan42/MagratheaGrow.in/issues"
+  },
+  "homepage": "https://github.com/Teagan42/MagratheaGrow.in#readme"
+}
