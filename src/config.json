@@ -1,0 +1,48 @@
+{
+    "jobs": [
+        {
+            "name": "webcam",
+            "schedule": "0 1,13 * * *"
+        }
+    ], "sensors": {
+        "1": {
+            "alias": "Veg Room (NE)",
+            "allowedRange": {
+                "low": 72,
+                "high": 85
+            }
+        }, "2": {
+            "alias": "Veg Room (NW)",
+            "allowedRange": {
+                "low": 72,
+                "high": 85
+            }
+        }
+    }, "cameras": {
+        "1": {
+            "id": "1",
+            "displayName": "Veg Room",
+            "ip": "192.168.1.109",
+            "password": "CAMERA1_PASSWORD",
+            "session": "CAMERA1_SESSION",
+            "uri": "/{SESSION}"
+        }
+    }, "services": {
+        "twitter": {
+            "consumerKey": "TWITTER_CONSUMER_KEY",
+            "consumerSecret": "TWITTER_CONSUMER_SECRET",
+            "accessTokenKey": "TWITTER_ACCESS_KEY",
+            "accessTokenSecret": "TWITTER_ACCESS_SECRET"
+        }
+    }, "rooms": [
+        {
+            "id": "veg",
+            "displayName": "Veg Room",
+            "sensors": [
+                "1",
+                "2"
+            ],
+            "cameras": []
+        }
+    ]
+}
