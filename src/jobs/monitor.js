@@ -2,10 +2,15 @@ var ds18b20 = require('../services/ds18b20.js');
 var logger = require('../services/logger.js');
 var _ = require('lodash');
 
+var sensors;
 var config;
 
 var init = function (cfg) {
     config = cfg || {};
+
+    sensors = _.filter(config.sensors, function (sensor) {
+        return sensor.isActive;
+    });
 
     logger.init(config);
 };
@@ -16,7 +21,7 @@ var run = function () {
         return;
     }
 
-    config.sensors.forEach(function (sensor) {
+    sensors.forEach(function (sensor) {
         if (sensor.type == 'temperature') {
             ds18b20.read(sensor)
                 .then(function (result) {
