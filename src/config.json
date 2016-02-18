@@ -15,7 +15,8 @@
                 "low": 72,
                 "high": 85
             },
-            "type": "temperature"
+            "type": "temperature",
+            "isActive": true
         },
         "fake-sensor-2": {
             "id": "fake-sensor-2",
@@ -24,7 +25,8 @@
                 "low": 72,
                 "high": 85
             },
-            "type": "temperature"
+            "type": "temperature",
+            "isActive": true
         }
     }, "cameras": {
         "1": {
