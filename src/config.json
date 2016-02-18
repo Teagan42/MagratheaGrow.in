@@ -29,8 +29,8 @@
             "displayName": "Veg Room",
             "ip": "192.168.1.109",
             "password": "CAMERA1_PASSWORD",
-            "session": "CAMERA1_SESSION",
-            "uri": "/{SESSION}"
+            "session": "MKc73PHKhaZi7msnejIjW8RCBOhhGQ",
+            "uri": "/ccm/CcmGetImageRequest.jpg?hfrom_handle=887330&dSession=1&dSession_Nid={SESSION}&dSession_SerialNumber=1jfiegbpy2gja&dtoken=p0_xxxxxxxxxx"
         }
     }, "services": {
         "twitter": {
