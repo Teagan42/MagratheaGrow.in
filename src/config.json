@@ -3,6 +3,9 @@
         {
             "name": "webcam",
             "schedule": "0 1,13 * * *"
+        }, {
+            "name": "monitor",
+            "schedule": "* * * * *"
         }
     ], "sensors": {
         "1": {
