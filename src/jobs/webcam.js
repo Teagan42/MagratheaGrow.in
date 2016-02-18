@@ -5,10 +5,10 @@ var fs = require('fs');
 var config;
 
 var buildUrl = function (ip, uri, session) {
-    return 'http://' + ip + uri.replace('SESSION', session);
+    return 'http://' + ip + uri.replace('{SESSION}', session);
 };
 
-var download = function (uri, filename, callback){
+var download = function (uri, filename, callback) {
     request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
 };
 
