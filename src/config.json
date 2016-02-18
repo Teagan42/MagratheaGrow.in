@@ -8,15 +8,18 @@
             "schedule": "* * * * *"
         }
     ], "sensors": {
-        "1": {
-            "alias": "Veg Room (NE)",
+        "fake-sensor-1": {
+            "id": "fake-sensor-1",
+            "displayName": "Veg Room (NE)",
             "allowedRange": {
                 "low": 72,
                 "high": 85
             },
             "type": "temperature"
-        }, "2": {
-            "alias": "Veg Room (NW)",
+        },
+        "fake-sensor-2": {
+            "id": "fake-sensor-2",
+            "displayName": "Veg Room (NW)",
             "allowedRange": {
                 "low": 72,
                 "high": 85
