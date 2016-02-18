@@ -10,13 +10,15 @@
             "allowedRange": {
                 "low": 72,
                 "high": 85
-            }
+            },
+            "type": "temperature"
         }, "2": {
             "alias": "Veg Room (NW)",
             "allowedRange": {
                 "low": 72,
                 "high": 85
-            }
+            },
+            "type": "temperature"
         }
     }, "cameras": {
         "1": {
