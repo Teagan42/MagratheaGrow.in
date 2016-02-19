@@ -6,6 +6,8 @@ var config;
 var client;
 
 var init = function (cfg) {
+    if (config) { return; }
+
     config = cfg || { };
 
     client = new Twitter({

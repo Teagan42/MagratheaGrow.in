@@ -4,6 +4,8 @@ var loggers = [];
 var config;
 
 var init = function (cfg) {
+    if (config) { return; }
+
     config = cfg || { };
 
     fs.readdirSync('./src/services/loggers')
