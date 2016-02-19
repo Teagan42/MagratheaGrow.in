@@ -17,6 +17,16 @@
             },
             "type": "temperature",
             "isActive": true
+        },
+        "28-0004200de7ff": {
+            "id": "28-0004200de7ff",
+            "displayName": "Veg Room (SW)",
+            "allowedRange": {
+                "low": 72,
+                "high": 85
+            },
+            "type": "temperature",
+            "isActive": true
         }
     }, "cameras": {
         "1": {
