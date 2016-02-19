@@ -17,16 +17,6 @@
             },
             "type": "temperature",
             "isActive": true
-        },
-        "fake-sensor-2": {
-            "id": "fake-sensor-2",
-            "displayName": "Veg Room (NW)",
-            "allowedRange": {
-                "low": 72,
-                "high": 85
-            },
-            "type": "temperature",
-            "isActive": false
         }
     }, "cameras": {
         "1": {
