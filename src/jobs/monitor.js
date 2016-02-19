@@ -8,10 +8,6 @@ var config;
 var init = function (cfg) {
     config = cfg || {};
 
-    sensors = _.filter(config.sensors, function (sensor) {
-        return sensor.isActive;
-    });
-
     logger.init(config);
 };
 
@@ -21,15 +17,17 @@ var run = function () {
         return;
     }
 
-    sensors.forEach(function (sensor) {
+    config.sensors.forEach(function (sensor) {
+        if (!sensor.isActive) return;
+
         if (sensor.type == 'temperature') {
             ds18b20.read(sensor)
                 .then(function (result) {
-                    logger.log('MONITOR\tREADING\t' + result.sensor.displayName + '\t' + result.reading.F + '°F');
+                    logger.log('MONITOR\tREADING\t' + result.sensor.displayName + '\t' + result.reading.F.toFixed(2) + '°F');
 
                     if (result.sensor.allowedRange) {
                         if (result.reading.F < result.sensor.allowedRange.low || result.reading.F > result.sensor.allowedRange.high) {
-                            logger.warn(result.sensor.displayName + ' is out of allowed range: ' + result.reading.F + '°F');
+                            logger.warn(result.sensor.displayName + ' is out of allowed range: ' + result.reading.F.toFixed(2) + '°F');
                         }
                     }
                 })
