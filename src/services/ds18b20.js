@@ -18,10 +18,15 @@ var read = function (sensor) {
     var promise = new Promise(function (resolve, reject) {
         var sensorData = sensor;
 
-        ds18b20.temperature(sensor.id, function(error, reading) {
+        ds18b20.temperature(sensor.id, function(error, readC) {
             if (error) {
                 reject(error);
             } else {
+                var reading = {
+                    "C": readC,
+                    "F": 9 / 5 * readC + 32
+                };
+
                 resolve({
                     "sensor": sensorData,
                     "reading": reading
