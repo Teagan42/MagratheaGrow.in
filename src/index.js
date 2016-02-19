@@ -8,6 +8,4 @@ config.jobs.forEach(function (jobConfig) {
 
     var jobId = crontab.scheduleJob(jobConfig.schedule, job.run);
     console.log('CronJob Scheduled', jobConfig.name, jobId);
-
-    job.run();
 });
