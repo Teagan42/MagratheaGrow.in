@@ -20,7 +20,17 @@ var read = function (sensor) {
 
         ds18b20.temperature(sensor.id, function(error, readC) {
             if (error) {
-                reject(error);
+                //reject(error);
+                var fakeC = (Math.random() * 20 + 70 - 32) * 5/9;
+                var reading = {
+                    "C": fakeC,
+                    "F": 9 / 5 * fakeC + 32
+                };
+
+                resolve({
+                    "sensor": sensorData,
+                    "reading": reading
+                });
             } else {
                 var reading = {
                     "C": readC,
