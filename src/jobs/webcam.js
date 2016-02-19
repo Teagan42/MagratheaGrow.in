@@ -1,6 +1,7 @@
 var twitter = require('../services/twitter.js');
 var request = require('request');
 var fs = require('fs');
+var logger = require('../services/logger.js');
 
 var config;
 
@@ -30,6 +31,7 @@ var init = function (cfg) {
     config = cfg || {};
 
     twitter.init(config.services.twitter);
+    logger.init(config);
 };
 
 var run = function () {
