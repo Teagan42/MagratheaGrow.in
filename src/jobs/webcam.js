@@ -48,6 +48,8 @@ var run = function () {
     for (var cameraId in config.cameras) {
         var camera = config.cameras[cameraId];
 
+        console.log('WEBCAM', 'CAMERA', cameraId);
+
         download(buildUrl(camera.ip, camera.uri, login(camera)), getImageStore(camera), function () {
             var imageStore = getImageStore(camera);
 
