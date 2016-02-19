@@ -8,9 +8,9 @@
             "schedule": "* * * * *"
         }
     ], "sensors": {
-        "fake-sensor-1": {
-            "id": "fake-sensor-1",
-            "displayName": "Veg Room (NE)",
+        "f28-0004200f05ff": {
+            "id": "28-0004200f05ff",
+            "displayName": "Veg Room (NW)",
             "allowedRange": {
                 "low": 72,
                 "high": 85
@@ -26,7 +26,7 @@
                 "high": 85
             },
             "type": "temperature",
-            "isActive": true
+            "isActive": false
         }
     }, "cameras": {
         "1": {
