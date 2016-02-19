@@ -17,7 +17,8 @@ var run = function () {
         return;
     }
 
-    config.sensors.forEach(function (sensor) {
+    for (var sensorId in config.sensors) {
+        var sensor = config.sensors[cameraId];
         if (!sensor.isActive) return;
 
         if (sensor.type == 'temperature') {
@@ -35,7 +36,7 @@ var run = function () {
                     logger.error('MONITOR\tERROR\t' + error);
                 });
         }
-    });
+    };
 };
 
 exports.init = init;
