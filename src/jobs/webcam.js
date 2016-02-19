@@ -10,7 +10,12 @@ var buildUrl = function (ip, uri, session) {
 };
 
 var download = function (uri, filename, callback) {
-    request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+    request.get(uri)
+        .on('error', function (error) {
+            console.log(error);
+            fs.unlinkSync(filename);
+        })
+        .pipe(fs.createWriteStream(filename)).on('close', callback);
 };
 
 var getImageStore = function (camera) {
@@ -43,10 +48,19 @@ var run = function () {
     for (var cameraId in config.cameras) {
         var camera = config.cameras[cameraId];
 
-        console.log('WEBCAM', 'camera', camera);
         download(buildUrl(camera.ip, camera.uri, login(camera)), getImageStore(camera), function () {
-            var data = fs.readFileSync(getImageStore(camera));
-            twitter.tweet(camera.displayName, data);
+            var imageStore = getImageStore(camera);
+
+            if (fs.access(imageStore, fs.F_OK, function (error) {
+                console.log(error);
+                if (error) {
+                    logger.error(error);
+                } else {
+                    var data = fs.readFileSync(imageStore);
+                    twitter.tweet(camera.displayName, data);
+                    fs.unlinkSync(imageStore);
+                }
+            }));
         });
     }
 };
