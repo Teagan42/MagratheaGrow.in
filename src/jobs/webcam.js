@@ -26,7 +26,7 @@ var download = function (camera) {
 };
 
 var getImageStore = function (camera) {
-    return 'tmp/camera' + camera.ip + '.png';
+    return 'tmp/camera' + camera.id + '.png';
 };
 
 var login = function (camera) {
