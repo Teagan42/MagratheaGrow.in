@@ -29,13 +29,21 @@
             "isActive": true
         }
     }, "cameras": {
-        "1": {
-            "id": "1",
+        "1jfiegbpy2gja": {
+            "id": "1jfiegbpy2gja",
             "displayName": "Veg Room",
             "ip": "192.168.1.109",
             "password": "CAMERA1_PASSWORD",
-            "session": "MKvdHd0G5hdWZo9%2efeloPWhCFBZhHg",
+            "session": "MPwFtak5F_cstmyeZ0pJN5ZCBnlhAQ",
             "uri": "/ccm/CcmGetImageRequest.jpg?hfrom_handle=887330&dSession=1&dSession_Nid={SESSION}&dSession_SerialNumber=1jfiegbpy2gja&dtoken=p0_xxxxxxxxxx"
+        },
+        "1jfiegbpy2y3q": {
+            "id": "1jfiegbpy2y3q",
+            "displayName": "Flower Room",
+            "ip": "192.168.1.142",
+            "password": "CAMERA1_PASSWORD",
+            "session": "MMwlC29b5L_R7HcCxYKX8QRCEslhAQ",
+            "uri": "/ccm/CcmGetImageRequest.jpg?hfrom_handle=887330&dSession=1&dSession_Nid={SESSION}&dSession_SerialNumber=1jfiegbpy2y3q&dtoken=p0_xxxxxxxxxx"
         }
     }, "services": {
         "twitter": {
